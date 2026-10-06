@@ -12,3 +12,101 @@
 footer{padding:28px 0 45px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}footer b,footer span{display:block}footer b{color:var(--ink);font-size:14px}.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:65px}.portrait-wrap{margin-top:15px}.portrait-card{max-width:500px}.research-grid{grid-template-columns:1fr 1fr}.section-head{grid-template-columns:1fr}.section-head h2,.section-head>p:last-child{grid-column:1}.about-grid,.contact-card{grid-template-columns:1fr}.timeline{margin-left:0}.nav-links{position:absolute;left:20px;right:20px;top:68px;display:none;flex-direction:column;padding:20px;background:white;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.nav-links.open{display:flex}.menu{display:block}}
 @media(max-width:620px){.shell{width:min(100% - 26px,1180px)}.hero{gap:35px;min-height:auto}.hero h1{font-size:55px}.quick{gap:18px;justify-content:space-between}.quick strong{font-size:24px}.portrait-note{left:10px;bottom:20px}.orbit{display:none}.section{padding:75px 0}.section-head h2{font-size:42px}.research-grid{grid-template-columns:1fr}.research-card{min-height:250px}.project{grid-template-columns:45px 1fr;gap:12px}.pub{grid-template-columns:50px 1fr}.pub>b{display:none}.timeline{border-left:0}.time{grid-template-columns:1fr;padding-left:22px}.time:before{left:-5px}.contact-card{padding:32px 23px}footer{flex-direction:column}}
+
+
+/* V3 — bright academic blue/teal redesign */
+:root{
+  --navy:#083b66;
+  --navy2:#0b5683;
+  --teal:#079f9a;
+  --cyan:#58c9d1;
+  --ice:#eef9fb;
+  --paper:#ffffff;
+  --ink:#092b4a;
+  --muted:#536d82;
+  --line:#d6e5ef;
+  --white:#ffffff;
+  --shadow:0 22px 65px rgba(8,59,102,.12)
+}
+body{background:#fff}
+.nav-wrap{background:rgba(255,255,255,.92);border-bottom:1px solid #d9e8f1}
+.hero{
+  position:relative;
+  max-width:none;
+  width:100%;
+  padding-left:max(calc((100vw - 1180px)/2),21px);
+  padding-right:max(calc((100vw - 1180px)/2),21px);
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 36%,rgba(255,255,255,.45) 62%,rgba(255,255,255,.12) 100%),
+    url("hero-background.png") center/cover no-repeat;
+}
+.hero:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(220,242,255,.12),rgba(255,255,255,.06));
+  pointer-events:none
+}
+.hero-copy,.portrait-wrap{position:relative;z-index:1}
+.hero h1{color:#082f56;text-shadow:0 2px 18px rgba(255,255,255,.55)}
+.hero h1 em{color:#087e9b}
+.lead{color:#365b73;font-weight:520}
+.primary{background:linear-gradient(135deg,#07508a,#087a9d)}
+.ghost{background:rgba(255,255,255,.88);border-color:#bcd6e5}
+.quick{border-color:#cfe1eb}
+.quick strong{color:#07508a}
+.ticker{background:linear-gradient(90deg,#07508a,#087a9d)}
+.dark{background:linear-gradient(180deg,#eef8fc,#f8fcfe);color:var(--ink)}
+.light h2{color:#082f56}.light>p:last-child{color:var(--muted)}
+.research-card{
+  background:#fff;border:1px solid #d6e6ef;color:var(--ink);
+  box-shadow:0 10px 30px rgba(8,59,102,.055)
+}
+.research-card:hover{background:#f7fcff;border-color:#73c9d2;box-shadow:0 18px 38px rgba(8,59,102,.10)}
+.research-card>b{color:#079f9a}
+.research-card p{color:#5a7183}
+.research-card h3{margin-top:55px}
+.soft{background:#f3f9fc}
+.fact-card{background:#f0f9fb;border-color:#d4ebef}
+.contact-card{background:linear-gradient(135deg,#07508a,#079f9a)}
+.portrait-card{border-color:#c9dde8}
+.orbit{border-color:rgba(7,159,154,.26)}
+
+
+/* V4 — research-theme image cards */
+.research-card{
+  overflow:hidden;
+  padding:0 0 28px;
+}
+.research-card > b,
+.research-card > h3,
+.research-card > p,
+.research-card > span{
+  margin-left:28px;
+  margin-right:28px;
+}
+.research-card > b{
+  display:block;
+  padding-top:24px;
+}
+.research-card .research-image{
+  width:100%;
+  height:190px;
+  margin-top:22px;
+  overflow:hidden;
+  background:#eaf4f8;
+}
+.research-card .research-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transition:transform .55s ease;
+}
+.research-card:hover .research-image img{
+  transform:scale(1.045);
+}
+.research-card .research-image + h3{
+  margin-top:24px;
+}
+@media (max-width:760px){
+  .research-card .research-image{height:220px}
+}

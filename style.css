@@ -308,3 +308,40 @@ html[data-theme="hybrid"] .hero-name{color:#123b69}
   .brand strong{font-size:18px!important}
   .brand small{font-size:10px!important}
 }
+
+
+/* V7.1 — corrected hero name placement */
+.hero-copy .hero-name{
+  display:block!important;
+  position:relative!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  font-size:clamp(3.8rem,6.2vw,6.4rem)!important;
+  line-height:.92!important;
+  font-weight:900!important;
+  letter-spacing:-.06em!important;
+  color:#173d68!important;
+  z-index:2;
+}
+.hero-copy .hero-name + .eyebrow{
+  margin:0 0 24px!important;
+}
+.hero-copy .hero-statement{
+  margin:0 0 24px!important;
+  font-size:clamp(2.5rem,4.5vw,4.8rem)!important;
+  line-height:1.02!important;
+  font-weight:850!important;
+  letter-spacing:-.05em!important;
+  color:#173d68!important;
+}
+.hero-copy .hero-statement em{
+  color:#348fa7!important;
+  font-style:normal!important;
+}
+html[data-theme="dark"] .hero-copy .hero-name,
+html[data-theme="dark"] .hero-copy .hero-statement{color:#f7fbff!important}
+
+@media(max-width:760px){
+  .hero-copy .hero-name{font-size:clamp(3rem,14vw,4.8rem)!important}
+  .hero-copy .hero-statement{font-size:clamp(2.1rem,10vw,3.4rem)!important}
+}

@@ -958,3 +958,21 @@ html[data-theme="dark"] .contact-card a[href*="github"]{
   text-decoration:none!important;
   font-weight:750!important;
 }
+
+
+/* V16 — fix standalone Google Scholar CTA in dark mode */
+html[data-theme="dark"] #publications a[href*="scholar.google"],
+html[data-theme="dark"] .publications a[href*="scholar.google"],
+html[data-theme="dark"] a[href*="scholar.google"][class*="btn"]{
+  background:linear-gradient(135deg,#2f79c7 0%,#38aaa6 100%)!important;
+  color:#ffffff!important;
+  border:1px solid rgba(103,218,211,.35)!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.18)!important;
+  text-decoration:none!important;
+}
+html[data-theme="dark"] #publications a[href*="scholar.google"]:hover,
+html[data-theme="dark"] .publications a[href*="scholar.google"]:hover{
+  background:linear-gradient(135deg,#3686d2 0%,#42b5b0 100%)!important;
+  color:#ffffff!important;
+  transform:translateY(-2px);
+}

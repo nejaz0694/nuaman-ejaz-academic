@@ -852,3 +852,109 @@ html[data-theme="dark"] .theme-btn.active{
     color:#69d0cc!important;
   }
 }
+
+
+/* V15 — dark-mode contrast corrections */
+
+/* Publications: keep cards dark, never white */
+html[data-theme="dark"] .pub-list,
+html[data-theme="dark"] .publications-list,
+html[data-theme="dark"] .publication-list{
+  background:#0e2435!important;
+  border-color:#315469!important;
+}
+html[data-theme="dark"] .pub-row,
+html[data-theme="dark"] .publication-row,
+html[data-theme="dark"] .pub-list > a,
+html[data-theme="dark"] .pub-list > article,
+html[data-theme="dark"] .publications-list > *{
+  background:#0e2435!important;
+  border-color:#315469!important;
+  color:#f3f8fb!important;
+}
+html[data-theme="dark"] .pub-row:hover,
+html[data-theme="dark"] .publication-row:hover,
+html[data-theme="dark"] .pub-list > a:hover{
+  background:#123047!important;
+}
+html[data-theme="dark"] .pub-row h3,
+html[data-theme="dark"] .publication-row h3,
+html[data-theme="dark"] .pub-list h3,
+html[data-theme="dark"] .pub-list strong,
+html[data-theme="dark"] .publications-list h3,
+html[data-theme="dark"] .publications-list strong{
+  color:#f3f8fb!important;
+}
+html[data-theme="dark"] .pub-row p,
+html[data-theme="dark"] .publication-row p,
+html[data-theme="dark"] .pub-list p,
+html[data-theme="dark"] .publications-list p{
+  color:#a9bfcd!important;
+}
+
+/* If publication markup is table/list based, catch generic white children */
+html[data-theme="dark"] #publications .pub-list > *,
+html[data-theme="dark"] #publications .publication-list > *,
+html[data-theme="dark"] #publications .publications-list > *{
+  background:#0e2435!important;
+  border-color:#315469!important;
+}
+
+/* Filter buttons: visible text and selected state */
+html[data-theme="dark"] #publications button{
+  background:#10283a!important;
+  color:#d9e8ef!important;
+  border:1px solid #3a5d70!important;
+}
+html[data-theme="dark"] #publications button.active{
+  background:linear-gradient(135deg,#2f79c7,#38aaa6)!important;
+  color:#fff!important;
+  border-color:transparent!important;
+}
+
+/* Contact: fix white-on-white buttons */
+html[data-theme="dark"] .contact-card a{
+  color:#ffffff!important;
+}
+html[data-theme="dark"] .contact-card .contact-actions a,
+html[data-theme="dark"] .contact-card .actions a{
+  background:rgba(7,30,48,.22)!important;
+  border:1px solid rgba(255,255,255,.28)!important;
+  color:#ffffff!important;
+}
+html[data-theme="dark"] .contact-card .contact-actions a:hover,
+html[data-theme="dark"] .contact-card .actions a:hover{
+  background:rgba(7,30,48,.38)!important;
+}
+
+/* Email button can remain light, but must use dark readable text */
+html[data-theme="dark"] .contact-card a[href^="mailto:"]{
+  background:#f4f8fa!important;
+  color:#173d68!important;
+  border-color:#f4f8fa!important;
+}
+html[data-theme="dark"] .contact-card .contact-email a[href^="mailto:"]{
+  background:transparent!important;
+  color:#ffffff!important;
+  border:0!important;
+  padding:0!important;
+}
+
+/* Academic profile links: make them consistent buttons instead of loose underlined links */
+html[data-theme="dark"] .contact-card a[href*="scholar.google"],
+html[data-theme="dark"] .contact-card a[href*="researchgate"],
+html[data-theme="dark"] .contact-card a[href*="scopus"],
+html[data-theme="dark"] .contact-card a[href*="orcid"],
+html[data-theme="dark"] .contact-card a[href*="github"]{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-height:48px;
+  padding:12px 18px!important;
+  margin:4px!important;
+  border-radius:12px!important;
+  background:rgba(7,30,48,.20)!important;
+  border:1px solid rgba(255,255,255,.25)!important;
+  color:#fff!important;
+  text-decoration:none!important;
+  font-weight:750!important;
+}

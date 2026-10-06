@@ -15,11 +15,22 @@
     <nav class="nav shell">
       <a class="brand" href="#home" aria-label="Nuaman Ejaz home">
         <span class="brand-mark">NE</span></a>
-      <button class="menu" id="menu" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+      <button class="menu" id="menu" aria-label="Open menu">☰</button>
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a>
         <a href="#publications">Publications</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#conferences">Conferences</a><a href="#contact">Contact</a>
       </div>
+    
+<details class="mobile-native-menu">
+  <summary aria-label="Open navigation menu">☰</summary>
+  <div class="mobile-native-links">
+    
+        <a href="#about">About</a><a href="#research">Research</a><a href="#projects">Projects</a>
+        <a href="#publications">Publications</a><a href="#education">Education</a><a href="#experience">Experience</a><a href="#conferences">Conferences</a><a href="#contact">Contact</a>
+      
+  </div>
+</details>
+
     <div class="theme-switcher" aria-label="Display theme"><button class="theme-btn active" data-theme="light" title="Light mode">☀</button><button class="theme-btn" data-theme="hybrid" title="Hybrid mode">◐</button><button class="theme-btn" data-theme="dark" title="Dark mode">☾</button></div></nav>
   </header>
 
@@ -241,40 +252,5 @@
   <footer class="shell"><div><b>Nuaman Ejaz</b><span>Hydrology · Water Resources · Climate</span></div><p>© <span id="year"></span> Nuaman Ejaz. Built for research, teaching and collaboration.</p></footer>
 <script>
 (function(){const r=document.documentElement,b=document.querySelectorAll(".theme-btn");function s(t){r.setAttribute("data-theme",t);localStorage.setItem("nuaman-theme",t);b.forEach(x=>x.classList.toggle("active",x.dataset.theme===t));}const v=localStorage.getItem("nuaman-theme");s(v||"light");b.forEach(x=>x.addEventListener("click",()=>s(x.dataset.theme)));})();
-</script>
-<script>
-(function () {
-  const menu = document.getElementById('menu');
-  const nav = document.getElementById('navLinks');
-  if (!menu || !nav) return;
-
-  function closeMenu() {
-    nav.classList.remove('open');
-    menu.setAttribute('aria-expanded', 'false');
-    menu.textContent = '☰';
-  }
-
-  menu.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const isOpen = nav.classList.toggle('open');
-    menu.setAttribute('aria-expanded', String(isOpen));
-    menu.textContent = isOpen ? '✕' : '☰';
-  });
-
-  nav.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', closeMenu);
-  });
-
-  document.addEventListener('click', function (e) {
-    if (!nav.contains(e.target) && !menu.contains(e.target)) closeMenu();
-  });
-
-  window.addEventListener('resize', function () {
-    if (window.innerWidth > 900) closeMenu();
-  });
-})();
-</script>
-
-</body>
+</script></body>
 </html>

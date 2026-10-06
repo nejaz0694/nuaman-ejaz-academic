@@ -679,3 +679,176 @@ body::before{
     font-size:clamp(2.02rem,8.45vw,2.85rem)!important;
   }
 }
+
+
+/* V14 — polished dark mode */
+html[data-theme="dark"]{
+  --bg:#081725;
+  --surface:#0d2233;
+  --surface2:#112a3d;
+  --ink:#f3f8fb;
+  --muted:#a9bfcd;
+  --line:#28485c;
+  --navy:#eef7fb;
+  --navy2:#a8d8e8;
+  --teal:#55c8c2;
+  --cyan:#62bddd;
+  color-scheme:dark;
+}
+
+html[data-theme="dark"] body{
+  background:#081725!important;
+  color:#f3f8fb!important;
+}
+
+/* Dark header: retain brand colors without the harsh 50/50 split */
+html[data-theme="dark"] .nav-wrap{
+  background:linear-gradient(90deg,#0b2440 0%,#12375a 52%,#15585e 100%)!important;
+  border-bottom:1px solid rgba(102,201,199,.20);
+}
+html[data-theme="dark"] .nav-links a{color:#f3f8fb!important}
+html[data-theme="dark"] .nav-links a:hover{color:#71d4cf!important}
+
+/* Hero */
+html[data-theme="dark"] .hero{
+  background:
+    radial-gradient(circle at 78% 25%,rgba(53,157,171,.12),transparent 32%),
+    #081725!important;
+}
+html[data-theme="dark"] .hero-name .name-blue{color:#f3f8fb!important}
+html[data-theme="dark"] .hero-name .name-teal{color:#5cc8cf!important}
+html[data-theme="dark"] .hero-copy .hero-statement{color:#f1f7fb!important}
+html[data-theme="dark"] .hero-copy .hero-statement em{color:#62bfd0!important}
+html[data-theme="dark"] .hero .lead{color:#b9ccd7!important}
+html[data-theme="dark"] .hero .eyebrow{color:#62cbc7!important}
+
+/* General sections */
+html[data-theme="dark"] section,
+html[data-theme="dark"] .light,
+html[data-theme="dark"] .soft{
+  background:#081725!important;
+  color:#f3f8fb!important;
+}
+html[data-theme="dark"] .section-head h2,
+html[data-theme="dark"] section h2{color:#f3f8fb!important}
+html[data-theme="dark"] .section-head p,
+html[data-theme="dark"] section p{color:#b4c8d4}
+
+/* Cards */
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .pub-card,
+html[data-theme="dark"] .fact-card,
+html[data-theme="dark"] .profile-card,
+html[data-theme="dark"] .timeline-card,
+html[data-theme="dark"] .experience-card,
+html[data-theme="dark"] .conference-card{
+  background:#0e2435!important;
+  border-color:#28485c!important;
+  box-shadow:0 16px 40px rgba(0,0,0,.20)!important;
+}
+html[data-theme="dark"] .research-card h3,
+html[data-theme="dark"] .project-card h3,
+html[data-theme="dark"] .pub-card h3,
+html[data-theme="dark"] .timeline-card h3,
+html[data-theme="dark"] .experience-card h3,
+html[data-theme="dark"] .conference-card h3{
+  color:#f2f8fb!important;
+}
+
+/* About/profile readability */
+html[data-theme="dark"] .about-copy p,
+html[data-theme="dark"] .about-grid > div:first-child p,
+html[data-theme="dark"] .profile-card p,
+html[data-theme="dark"] .fact-card p{color:#b9ccd7!important}
+html[data-theme="dark"] .profile-card strong,
+html[data-theme="dark"] .fact-card strong{color:#f4f9fb!important}
+
+/* Publications */
+html[data-theme="dark"] .publications,
+html[data-theme="dark"] #publications{background:#0a1c2a!important}
+html[data-theme="dark"] .pub-item,
+html[data-theme="dark"] .publication-item{
+  background:#0e2435!important;
+  border-color:#29495c!important;
+}
+html[data-theme="dark"] .pub-item h3,
+html[data-theme="dark"] .publication-item h3,
+html[data-theme="dark"] .pub-item .pub-title,
+html[data-theme="dark"] .publication-item .pub-title{color:#f3f8fb!important}
+html[data-theme="dark"] .pub-item p,
+html[data-theme="dark"] .publication-item p,
+html[data-theme="dark"] .journal{color:#9fb9c8!important}
+html[data-theme="dark"] .pub-filters button,
+html[data-theme="dark"] .filter-btn{
+  background:#10283a!important;
+  color:#d8e8ef!important;
+  border-color:#315469!important;
+}
+html[data-theme="dark"] .pub-filters button.active,
+html[data-theme="dark"] .filter-btn.active{
+  background:linear-gradient(135deg,#296eae,#359f9b)!important;
+  color:#fff!important;
+  border-color:transparent!important;
+}
+
+/* Buttons */
+html[data-theme="dark"] .btn.primary,
+html[data-theme="dark"] .hero-actions a:first-child{
+  background:linear-gradient(135deg,#2f79c7,#38aaa6)!important;
+  color:#fff!important;
+}
+html[data-theme="dark"] .btn.secondary,
+html[data-theme="dark"] .hero-actions a:nth-child(2){
+  background:#0e2435!important;
+  color:#eef7fb!important;
+  border-color:#3b6175!important;
+}
+
+/* Portrait and focus label */
+html[data-theme="dark"] .portrait-card,
+html[data-theme="dark"] .hero-photo{
+  border-color:#31556b!important;
+  box-shadow:0 22px 60px rgba(0,0,0,.30)!important;
+}
+html[data-theme="dark"] .focus-card,
+html[data-theme="dark"] .focus-tag{
+  background:rgba(5,20,33,.94)!important;
+  color:#f5fbff!important;
+}
+
+/* Stats and separators */
+html[data-theme="dark"] .stats,
+html[data-theme="dark"] .hero-stats{border-color:#28485c!important}
+html[data-theme="dark"] .stats strong,
+html[data-theme="dark"] .hero-stats strong{color:#70cbd0!important}
+
+/* Contact retains blue-teal identity but is deeper in dark mode */
+html[data-theme="dark"] .contact-card{
+  background:linear-gradient(135deg,#174c78 0%,#237f7c 100%)!important;
+  border-color:rgba(116,218,211,.25)!important;
+}
+
+/* Theme control */
+html[data-theme="dark"] .theme-switcher{
+  background:rgba(7,24,39,.65)!important;
+  border-color:#45687a!important;
+}
+html[data-theme="dark"] .theme-btn{color:#c6d9e3!important}
+html[data-theme="dark"] .theme-btn.active{
+  background:#3ca7b2!important;
+  color:#fff!important;
+}
+
+/* Native mobile menu */
+@media(max-width:900px){
+  html[data-theme="dark"] .mobile-native-links{
+    background:#0e2435!important;
+    border-color:#315469!important;
+  }
+  html[data-theme="dark"] .mobile-native-links a{color:#edf6fa!important}
+  html[data-theme="dark"] .mobile-native-links a:active{
+    background:#15354a!important;
+    color:#69d0cc!important;
+  }
+}

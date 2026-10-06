@@ -1,0 +1,10 @@
+const $=(s)=>document.querySelector(s), $$=(s)=>document.querySelectorAll(s);
+$("#year").textContent=new Date().getFullYear();
+window.addEventListener("scroll",()=>{const h=document.documentElement;$("#progress").style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight))*100)+"%"});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");obs.unobserve(e.target)}}),{threshold:.12});
+$$(".reveal").forEach(el=>obs.observe(el));
+const countObs=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return; const el=e.target,n=+el.dataset.count,plus=el.dataset.plus;let start=0,d=900,t0=performance.now();function tick(t){let p=Math.min((t-t0)/d,1),v=Math.floor(n*(1-Math.pow(1-p,3)));el.textContent=v+(plus?"+":"");if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick);countObs.unobserve(el)}),{threshold:.5});
+$$("[data-count]").forEach(el=>countObs.observe(el));
+$$(".filter").forEach(btn=>btn.addEventListener("click",()=>{$$(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");let f=btn.dataset.filter;$$(".pub").forEach(p=>p.classList.toggle("hidden",f!=="all"&&p.dataset.category!==f))}));
+$("#menu").addEventListener("click",()=>$("#navLinks").classList.toggle("open"));
+$$(".nav-links a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));

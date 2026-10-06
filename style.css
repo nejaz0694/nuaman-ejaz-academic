@@ -549,3 +549,63 @@ html[data-theme="dark"] .about-grid > div:first-child p{color:#c2d4df}
 }
 html[data-theme="dark"] .mobile-native-links{background:#0d2334!important;border-color:#29495e!important}
 html[data-theme="dark"] .mobile-native-links a{color:#f5fbff!important}
+
+
+/* V12 — final mobile hero/header refinement */
+
+/* Two-tone top ribbon matching the Explore button */
+body::before{
+  content:"";
+  display:block;
+  height:7px;
+  background:linear-gradient(90deg,#2f79c7 0%,#2f79c7 48%,#38aaa6 100%);
+}
+
+/* Two-tone hero name */
+.hero-name .name-blue{color:#173d68!important}
+.hero-name .name-teal{color:#3698aa!important}
+
+/* Slightly reduce the research statement */
+.hero-copy .hero-statement{
+  font-size:clamp(2.3rem,4.1vw,4.35rem)!important;
+}
+
+@media(max-width:900px){
+  /* Remove NE logo completely on mobile and let menu start at the left */
+  .brand{display:none!important}
+
+  .nav{
+    grid-template-columns:1fr auto!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+  .mobile-native-menu{
+    grid-column:1!important;
+    justify-self:start!important;
+  }
+  .theme-switcher{
+    grid-column:2!important;
+    justify-self:end!important;
+  }
+
+  /* Better-sized mobile hero typography */
+  .hero-copy .hero-name{
+    font-size:clamp(3.15rem,13vw,4.65rem)!important;
+    line-height:.92!important;
+    letter-spacing:-.055em!important;
+  }
+  .hero-copy .hero-statement{
+    font-size:clamp(2.15rem,9.2vw,3.05rem)!important;
+    line-height:1.04!important;
+    letter-spacing:-.045em!important;
+  }
+}
+
+@media(max-width:420px){
+  .hero-copy .hero-name{
+    font-size:clamp(2.85rem,12.5vw,3.75rem)!important;
+  }
+  .hero-copy .hero-statement{
+    font-size:clamp(2rem,8.7vw,2.7rem)!important;
+  }
+}

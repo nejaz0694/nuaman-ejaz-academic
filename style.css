@@ -609,3 +609,73 @@ body::before{
     font-size:clamp(2rem,8.7vw,2.7rem)!important;
   }
 }
+
+
+/* V13 — final header refinement */
+
+/* Remove NE logo on every screen size */
+.brand{
+  display:none!important;
+}
+
+/* Two-color desktop/mobile navigation bar: blue + teal */
+.nav-wrap{
+  background:linear-gradient(
+    90deg,
+    #284b7c 0%,
+    #284b7c 50%,
+    #2f9198 50%,
+    #2f9198 100%
+  )!important;
+}
+
+/* Keep the navigation comfortably centered after removing the logo */
+.nav{
+  grid-template-columns:1fr auto!important;
+}
+.nav-links{
+  justify-self:center!important;
+}
+.theme-switcher{
+  justify-self:end!important;
+}
+
+/* Slightly smaller research statement — reduced by ~2 more points */
+.hero-copy .hero-statement{
+  font-size:clamp(2.18rem,3.95vw,4.18rem)!important;
+}
+
+/* Preserve the two-tone name */
+.hero-name .name-blue{
+  color:#173d68!important;
+}
+.hero-name .name-teal{
+  color:#3698aa!important;
+}
+
+@media(max-width:900px){
+  .nav-wrap{
+    background:linear-gradient(
+      90deg,
+      #284b7c 0%,
+      #284b7c 50%,
+      #2f9198 50%,
+      #2f9198 100%
+    )!important;
+  }
+  .nav{
+    grid-template-columns:1fr auto!important;
+  }
+  .mobile-native-menu{
+    grid-column:1!important;
+    justify-self:start!important;
+  }
+  .theme-switcher{
+    grid-column:2!important;
+    justify-self:end!important;
+  }
+
+  .hero-copy .hero-statement{
+    font-size:clamp(2.02rem,8.45vw,2.85rem)!important;
+  }
+}

@@ -110,3 +110,31 @@ body{background:#fff}
 @media (max-width:760px){
   .research-card .research-image{height:220px}
 }
+
+/* V5 research cards and theme switcher */
+.theme-switcher{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.75);margin-left:12px}
+.theme-btn{width:31px;height:31px;border:0;border-radius:50%;cursor:pointer;background:transparent;color:var(--ink)}
+.theme-btn.active{background:#087a9d;color:#fff}
+.research-card{padding:0 0 28px!important;overflow:hidden}
+.research-card>b{display:block;padding:18px 28px 14px!important;margin:0!important;color:#079f9a}
+.research-card .research-image{margin:0!important;width:100%;height:190px}
+.research-card .research-image img{width:100%;height:100%;object-fit:cover;display:block}
+.research-card .research-image+h3{margin-top:22px!important}
+.research-card h3,.research-card p{margin-left:28px!important;margin-right:28px!important}
+html[data-theme="hybrid"] .nav-wrap{background:rgba(6,43,73,.95);border-color:rgba(255,255,255,.12)}
+html[data-theme="hybrid"] .nav-wrap a,html[data-theme="hybrid"] .brand{color:#fff}
+html[data-theme="hybrid"] .theme-switcher{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+html[data-theme="hybrid"] .theme-btn{color:#fff}
+html[data-theme="dark"] body{background:#071827;color:#eaf5fb}
+html[data-theme="dark"] .nav-wrap{background:rgba(5,20,33,.95);border-color:#18364c}
+html[data-theme="dark"] .nav-wrap a,html[data-theme="dark"] .brand{color:#eef8fc}
+html[data-theme="dark"] .theme-switcher{background:#0d2638;border-color:#24475d}
+html[data-theme="dark"] .theme-btn{color:#dff6f7}
+html[data-theme="dark"] section,html[data-theme="dark"] .dark,html[data-theme="dark"] .soft{background:#071827;color:#eaf5fb}
+html[data-theme="dark"] h2,html[data-theme="dark"] h3{color:#f5fbff}
+html[data-theme="dark"] p{color:#a9bfce}
+html[data-theme="dark"] .research-card,html[data-theme="dark"] .fact-card{background:#0d2334;border-color:#234357;color:#eef8fc}
+html[data-theme="dark"] .hero{background:linear-gradient(90deg,rgba(5,20,33,.96),rgba(5,20,33,.78) 38%,rgba(5,20,33,.2)),url("hero-background.png") center/cover no-repeat}
+html[data-theme="dark"] .hero h1{color:#fff;text-shadow:none}
+html[data-theme="dark"] .lead{color:#c1d5df}
+@media(max-width:900px){.theme-switcher{margin:8px 0}}

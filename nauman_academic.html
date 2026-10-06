@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nuaman Ejaz — PhD researcher in hydrology, water resources, remote sensing, hydroclimatic extremes, cryosphere–runoff processes, groundwater, and climate-change impacts." />
+  <meta name="theme-color" content="#0a3d4a" />
+  <title>Nuaman Ejaz | Hydrology · Water Resources · Remote Sensing</title>
+  <style>
+    :root {
+      --ink:#102a31; --muted:#5d747b; --line:#dce8ea; --paper:#f5faf9;
+      --card:#fff; --brand:#0a3d4a; --brand2:#116678; --accent:#6fcbd3; --soft:#e7f4f4;
+      --shadow:0 18px 50px rgba(9,52,62,.10); --radius:24px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);
+      background:radial-gradient(circle at 90% 6%,rgba(111,203,211,.20),transparent 24rem),linear-gradient(180deg,#fbfdfd 0%,var(--paper) 100%);line-height:1.65}
+    a{color:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
+    .nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(18px);background:rgba(251,253,253,.82);border-bottom:1px solid rgba(220,232,234,.75)}
+    .nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--brand);color:white;font-size:14px;box-shadow:var(--shadow)}
+    .links{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)} .links a{text-decoration:none;font-weight:650}.links a:hover{color:var(--brand)}
+    .nav-cta{color:white!important;background:var(--brand);padding:10px 15px;border-radius:999px}
+    .hero{padding:92px 0 54px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:end}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.78);font-size:13px;font-weight:800;color:var(--brand2);text-transform:uppercase;letter-spacing:.08em}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(111,203,211,.14)}
+    h1{font-size:clamp(50px,8vw,92px);line-height:.96;letter-spacing:-.055em;margin:24px 0;max-width:900px}
+    .lead{font-size:clamp(19px,2.3vw,27px);line-height:1.38;color:#31535c;max-width:850px;margin:0 0 28px}.sublead{font-size:16px;color:var(--muted);max-width:760px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:13px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid var(--line);background:white}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:white}.btn:hover{transform:translateY(-1px)}
+    .hero-card{border-radius:30px;min-height:360px;padding:30px;color:white;overflow:hidden;position:relative;background:linear-gradient(155deg,rgba(255,255,255,.10),transparent 45%),radial-gradient(circle at 75% 5%,rgba(111,203,211,.75),transparent 30%),linear-gradient(150deg,#0a3d4a,#0f6573 65%,#16353d);box-shadow:var(--shadow)}
+    .hero-card small{text-transform:uppercase;letter-spacing:.12em;font-weight:800;opacity:.78}.hero-card h2{font-size:29px;line-height:1.18;margin:18px 0 12px;letter-spacing:-.03em}.hero-card p{opacity:.88}
+    .hero-list{display:grid;gap:12px;margin-top:26px}.hero-list span{display:block;padding:11px 13px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);font-size:14px}
+    .metrics{padding:28px 0 70px}.metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.metric{background:rgba(255,255,255,.82);border:1px solid var(--line);padding:24px;border-radius:18px}
+    .metric strong{display:block;font-size:31px;line-height:1.05;color:var(--brand);letter-spacing:-.04em}.metric span{display:block;color:var(--muted);margin-top:7px;font-size:13px}
+    section{padding:70px 0}.section-head{display:grid;grid-template-columns:.45fr 1fr;gap:36px;margin-bottom:32px;align-items:start}
+    .kicker{color:var(--brand2);text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.12em}.section-head h2{font-size:clamp(34px,5vw,54px);line-height:1.05;margin:6px 0 0;letter-spacing:-.04em}.section-head p{margin:8px 0 0;color:var(--muted);max-width:730px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 12px 34px rgba(9,52,62,.05)}
+    .card h3{margin:6px 0 9px;font-size:20px;letter-spacing:-.025em}.card p{color:var(--muted);margin:0;font-size:14px}.tag{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--brand2)}
+    .research-card{min-height:210px;display:flex;flex-direction:column;justify-content:space-between}.icon{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;background:var(--soft);color:var(--brand);font-weight:900}
+    .timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:22px;background:white;border:1px solid var(--line);border-radius:18px;padding:22px}
+    .timeline-item .time{color:var(--brand2);font-weight:850;font-size:13px}.timeline-item h3{margin:0 0 4px;font-size:18px}.timeline-item .org{color:var(--muted);font-size:14px;margin-bottom:8px}.timeline-item p{margin:0;color:var(--muted);font-size:14px}
+    .pubs{display:grid;gap:14px;counter-reset:pub}.pub{counter-increment:pub;background:white;border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:46px 1fr;gap:16px}
+    .pub:before{content:counter(pub,decimal-leading-zero);font-weight:900;color:var(--brand2);font-size:13px;padding-top:3px}.pub h3{margin:0 0 7px;font-size:17px;line-height:1.4}.pub p{margin:0;color:var(--muted);font-size:13px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}.list{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:12px}.list li{padding-left:20px;position:relative;color:var(--muted);font-size:14px}.list li:before{content:"";position:absolute;left:0;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+    .skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:17px}.pill{padding:8px 10px;background:var(--soft);border:1px solid #d2eaeb;border-radius:999px;color:#26515a;font-weight:750;font-size:12px}
+    .contact{margin:54px 0 80px;padding:44px;border-radius:30px;color:white;background:linear-gradient(135deg,#082f39,#0f6573);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;box-shadow:var(--shadow)}
+    .contact h2{margin:0 0 12px;font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.045em}.contact p{margin:0;color:rgba(255,255,255,.78)}.contact .btn{border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.10);color:white}.contact .btn.primary{background:white;color:var(--brand);border-color:white}
+    footer{padding:24px 0 46px;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding-top:22px}
+    @media(max-width:880px){.hero-grid,.section-head,.contact{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.metric-grid{grid-template-columns:1fr 1fr}.hero{padding-top:66px}}
+    @media(max-width:640px){.wrap{width:min(100% - 26px,1160px)}.links a:not(.nav-cta){display:none}.cards,.split{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:5px}.contact{padding:30px 24px}section{padding:56px 0}.hero{padding-top:48px}h1{font-size:54px}}
+  </style>
+</head>
+<body>
+<nav class="nav"><div class="wrap nav-inner">
+  <a class="brand" href="#top"><span class="brand-mark">NE</span><span>Nuaman Ejaz</span></a>
+  <div class="links"><a href="#research">Research</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a class="nav-cta" href="#contact">Contact</a></div>
+</div></nav>
+
+<main id="top">
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> Hydrology · Water Resources · Remote Sensing</div>
+    <h1>Nuaman<br>Ejaz</h1>
+    <p class="lead">PhD researcher investigating how climate variability, cryosphere processes, drought, and groundwater change reshape water availability in high-mountain and water-stressed regions.</p>
+    <p class="sublead">Institute of Hydrology and Water Resources, Department of Hydraulic Engineering, Tsinghua University, Beijing, China.</p>
+    <div class="actions"><a class="btn primary" href="mailto:nam23@mails.tsinghua.edu.cn">Email me</a><a class="btn" href="https://scholar.google.com/citations?user=9rj3v_4AAAAJ&hl=en" target="_blank">Google Scholar ↗</a><a class="btn" href="#publications">Selected work</a></div>
+  </div>
+  <aside class="hero-card">
+    <small>Current research focus</small>
+    <h2>From snow and glacier processes to drought propagation and future streamflow.</h2>
+    <p>I combine process-based hydrological modelling, Earth observation, machine learning, and CMIP6 climate projections.</p>
+    <div class="hero-list"><span>Upper Indus & high-mountain hydrology</span><span>Hydroclimatic extremes & drought propagation</span><span>Remote sensing, groundwater & climate projections</span></div>
+  </aside>
+</div></header>
+
+<section class="metrics"><div class="wrap metric-grid">
+  <div class="metric"><strong>19</strong><span>Peer-reviewed journal articles</span></div>
+  <div class="metric"><strong>10</strong><span>Articles in Q1 (JCR) journals</span></div>
+  <div class="metric"><strong>397+</strong><span>Google Scholar citations · Aug 2026</span></div>
+  <div class="metric"><strong>10</strong><span>h-index · Google Scholar, Aug 2026</span></div>
+</div></section>
+
+<section id="research"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Research</div><h2>Water science across scales.</h2></div><p>My work connects climate forcing, hydrological processes, remote sensing, and data-driven models to understand water availability, extremes, and resilience in complex basins.</p></div>
+  <div class="cards">
+    <article class="card research-card"><div class="icon">01</div><div><span class="tag">Hydroclimate</span><h3>Drought & extremes</h3><p>Multi-scale meteorological and hydrological drought, propagation, intensity–duration–frequency behaviour, and large-scale climate controls.</p></div></article>
+    <article class="card research-card"><div class="icon">02</div><div><span class="tag">Cryosphere</span><h3>Snow, glaciers & runoff</h3><p>Process-based representation of snow- and glacier-influenced catchments, seasonal flow generation, peak behaviour, and future streamflow.</p></div></article>
+    <article class="card research-card"><div class="icon">03</div><div><span class="tag">Earth observation</span><h3>Remote sensing & groundwater</h3><p>GRACE/GRACE-FO, MODIS, Landsat, Sentinel, reanalysis, and GIS for water storage, drought, land-use, and environmental monitoring.</p></div></article>
+    <article class="card research-card"><div class="icon">04</div><div><span class="tag">Modelling</span><h3>Hydrological simulation</h3><p>DDD, SWAT, HEC-HMS, HEC-RAS, MODFLOW, conceptual modelling, calibration, validation, and benchmark-based evaluation.</p></div></article>
+    <article class="card research-card"><div class="icon">05</div><div><span class="tag">Climate futures</span><h3>CMIP6 projections</h3><p>Bias-corrected climate forcing, model screening, uncertainty-aware projections, changing high flows, drought, and hydroclimatic reorganization.</p></div></article>
+    <article class="card research-card"><div class="icon">06</div><div><span class="tag">Data science</span><h3>ML for Earth systems</h3><p>Python, Google Earth Engine, Random Forest, XGBoost, SVM, ANN/LSTM, statistical learning, wavelets, and geospatial analysis.</p></div></article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Experience</div><h2>Research, modelling & applied water work.</h2></div><p>Academic research is complemented by consulting and project experience in groundwater, land-use change, irrigation, remote sensing, and practical water-management studies.</p></div>
+  <div class="timeline">
+    <article class="timeline-item"><div class="time">Sep 2023 — Present</div><div><h3>Doctoral Researcher</h3><div class="org">Tsinghua University · Institute of Hydrology and Water Resources</div><p>Research on drought propagation, snow- and glacier-influenced runoff, remote sensing, groundwater storage, hydrological modelling, and climate-change impacts in the Indus Basin.</p></div></article>
+    <article class="timeline-item"><div class="time">May 2023 — Present</div><div><h3>Hydrological Consultant</h3><div class="org">Agro-Hydrological Services, Pakistan</div><p>Hydrological and water-balance studies supporting irrigation and water-management decisions, including satellite-based assessment of water quality, cropping patterns, and surface-water availability.</p></div></article>
+    <article class="timeline-item"><div class="time">Jan 2023 — Jan 2024</div><div><h3>Hydrogeologist</h3><div class="org">Smart Groundwater Monitoring Initiative · NSFC-funded project</div><p>Regional groundwater-storage assessment using smart monitoring systems, GRACE observations, remote sensing, and groundwater modelling.</p></div></article>
+  </div>
+</div></section>
+
+<section id="publications"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Selected publications</div><h2>Recent work.</h2></div><p>A selected set spanning groundwater, drought, remote sensing, and water resources.</p></div>
+  <div class="pubs">
+    <article class="pub"><div><h3>Understanding groundwater dynamics of the depleted aquifer in the Indus Basin based on the downscaled GRACE data and groundwater modelling.</h3><p>Journal of Hydrology: Regional Studies · 2026</p></div></article>
+    <article class="pub"><div><h3>Multi-scale meteorological and hydrological drought severity in a high-altitude Himalayan basin: an intensity–duration–frequency approach using SPI and SSI.</h3><p>Journal of Mountain Science · 2026</p></div></article>
+    <article class="pub"><div><h3>Remote sensing-based cropping pattern identification and its impact on groundwater use in canal command areas of an irrigated agriculture region in Pakistan.</h3><p>Agricultural Water Management · 2025</p></div></article>
+    <article class="pub"><div><h3>A robust integrated agricultural drought index under climate and land use variations at the local scale in Pakistan.</h3><p>Agricultural Water Management · 2024</p></div></article>
+    <article class="pub"><div><h3>Drought monitoring using Landsat-derived indices and the Google Earth Engine platform.</h3><p>Remote Sensing · 2023</p></div></article>
+  </div>
+</div></section>
+
+<section id="teaching"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">Teaching & exchange</div><h2>Communication, mentoring & international experience.</h2></div><p>Teaching and mentoring are an important part of my academic work, alongside international field and conference engagement.</p></div>
+  <div class="split">
+    <article class="card"><span class="tag">Teaching & mentoring</span><h3>Graduate teaching at Tsinghua</h3><ul class="list"><li>Teaching Assistant for English Communication and Presentation, six consecutive semesters.</li><li>Mentoring junior researchers in remote sensing, Google Earth Engine, and hydrological modelling.</li><li>Former Certified Teacher in Khyber Pakhtunkhwa, Pakistan.</li></ul></article>
+    <article class="card"><span class="tag">International engagement</span><h3>Research exchange & conferences</h3><ul class="list"><li>Visiting Researcher, Tsinghua–University of Melbourne river-basin management field programme, 2025.</li><li>AGU Fall Meeting 2024 presentation on climate variability controls on streamflow.</li><li>ICSWE 2024 oral presentation and Best Oral Presentation Award.</li></ul></article>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <div><div class="kicker" style="color:#93e0e6">Contact</div><h2>Open to research collaboration.</h2><p>Hydrology · climate change · cryosphere · drought · remote sensing · groundwater · water resources</p></div>
+  <div class="actions"><a class="btn primary" href="mailto:nam23@mails.tsinghua.edu.cn">nam23@mails.tsinghua.edu.cn</a><a class="btn" href="https://scholar.google.com/citations?user=9rj3v_4AAAAJ&hl=en" target="_blank">Google Scholar ↗</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap footer-inner"><span>© 2026 Nuaman Ejaz</span><span>Tsinghua University · Beijing, China</span></div></footer>
+</body>
+</html>

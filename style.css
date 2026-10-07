@@ -1221,3 +1221,121 @@ footer p, footer small{
     justify-content:flex-start!important;
   }
 }
+
+
+/* V20 — unified contact buttons on all screen sizes */
+
+/* Hide the plain visible email address */
+.contact-email{
+  display:none!important;
+}
+
+/* Make every contact/profile action identical */
+.contact-card .contact-actions,
+.contact-card .actions{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  width:100%!important;
+  align-items:stretch!important;
+}
+
+.contact-card .contact-actions a,
+.contact-card .actions a,
+.contact-card a[href^="mailto:"],
+.contact-card a[href*="scholar.google"],
+.contact-card a[href*="researchgate"],
+.contact-card a[href*="scopus"],
+.contact-card a[href*="orcid"],
+.contact-card a[href*="github"]{
+  width:100%!important;
+  min-width:0!important;
+  min-height:58px!important;
+  height:58px!important;
+  margin:0!important;
+  padding:0 18px!important;
+  box-sizing:border-box!important;
+
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+
+  border:1px solid rgba(255,255,255,.34)!important;
+  border-radius:14px!important;
+  background:rgba(255,255,255,.08)!important;
+  color:#ffffff!important;
+
+  text-decoration:none!important;
+  text-align:center!important;
+  font-size:16px!important;
+  font-weight:750!important;
+  line-height:1.2!important;
+
+  box-shadow:none!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+}
+
+.contact-card .contact-actions a:hover,
+.contact-card .actions a:hover,
+.contact-card a[href^="mailto:"]:hover,
+.contact-card a[href*="scholar.google"]:hover,
+.contact-card a[href*="researchgate"]:hover,
+.contact-card a[href*="scopus"]:hover,
+.contact-card a[href*="orcid"]:hover,
+.contact-card a[href*="github"]:hover{
+  background:rgba(255,255,255,.16)!important;
+  border-color:rgba(255,255,255,.56)!important;
+  transform:translateY(-2px);
+}
+
+/* Remove all special email button overrides from previous versions */
+.contact-card a[href^="mailto:"]{
+  background:rgba(255,255,255,.08)!important;
+  color:#ffffff!important;
+  border:1px solid rgba(255,255,255,.34)!important;
+}
+
+/* Dark mode: same unified style */
+html[data-theme="dark"] .contact-card .contact-actions a,
+html[data-theme="dark"] .contact-card .actions a,
+html[data-theme="dark"] .contact-card a[href^="mailto:"],
+html[data-theme="dark"] .contact-card a[href*="scholar.google"],
+html[data-theme="dark"] .contact-card a[href*="researchgate"],
+html[data-theme="dark"] .contact-card a[href*="scopus"],
+html[data-theme="dark"] .contact-card a[href*="orcid"],
+html[data-theme="dark"] .contact-card a[href*="github"]{
+  background:rgba(7,30,48,.18)!important;
+  color:#ffffff!important;
+  border:1px solid rgba(255,255,255,.30)!important;
+}
+
+/* Tablet */
+@media(max-width:1100px){
+  .contact-card .contact-actions,
+  .contact-card .actions{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .contact-card .contact-actions,
+  .contact-card .actions{
+    grid-template-columns:1fr!important;
+  }
+
+  .contact-card .contact-actions a,
+  .contact-card .actions a,
+  .contact-card a[href^="mailto:"],
+  .contact-card a[href*="scholar.google"],
+  .contact-card a[href*="researchgate"],
+  .contact-card a[href*="scopus"],
+  .contact-card a[href*="orcid"],
+  .contact-card a[href*="github"]{
+    height:56px!important;
+    min-height:56px!important;
+    justify-content:center!important;
+    font-size:16px!important;
+  }
+}

@@ -1120,3 +1120,104 @@ html[data-theme="dark"] .publications a[href*="scholar.google"]:hover{
     border:1px solid rgba(255,255,255,.28)!important;
   }
 }
+
+
+/* V19 — contact/footer cleanup on ALL screen sizes */
+
+/* Contact layout */
+.contact-card{
+  overflow:hidden!important;
+}
+.contact-card .contact-actions,
+.contact-card .actions{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:12px!important;
+  align-items:stretch!important;
+  width:100%!important;
+}
+
+/* All academic profile actions use one visual system */
+.contact-card .contact-actions a,
+.contact-card .actions a,
+.contact-card a[href*="scholar.google"],
+.contact-card a[href*="researchgate"],
+.contact-card a[href*="scopus"],
+.contact-card a[href*="orcid"],
+.contact-card a[href*="github"]{
+  min-height:52px!important;
+  margin:0!important;
+  padding:12px 16px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+  border-radius:12px!important;
+  text-decoration:none!important;
+  font-size:15.5px!important;
+  font-weight:750!important;
+  text-align:center!important;
+}
+
+/* Email button: compact and readable */
+.contact-card a[href^="mailto:"]:not(.contact-email a){
+  width:100%!important;
+  min-height:54px!important;
+  padding:14px 18px!important;
+  box-sizing:border-box!important;
+  overflow-wrap:anywhere!important;
+  font-size:15.5px!important;
+}
+
+/* Prevent the plain email line from being styled as a giant button */
+.contact-card .contact-email{
+  overflow-wrap:anywhere!important;
+}
+.contact-card .contact-email a{
+  display:inline!important;
+  width:auto!important;
+  min-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  text-decoration:none!important;
+}
+
+/* Footer cleanup on desktop and mobile */
+footer{
+  border-top:1px solid var(--line)!important;
+}
+footer .footer-inner,
+footer .footer-grid{
+  align-items:center!important;
+}
+footer p, footer small{
+  line-height:1.5!important;
+}
+
+/* Tablet */
+@media(max-width:1100px){
+  .contact-card .contact-actions,
+  .contact-card .actions{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .contact-card .contact-actions,
+  .contact-card .actions{
+    grid-template-columns:1fr!important;
+  }
+  .contact-card .contact-actions a,
+  .contact-card .actions a,
+  .contact-card a[href*="scholar.google"],
+  .contact-card a[href*="researchgate"],
+  .contact-card a[href*="scopus"],
+  .contact-card a[href*="orcid"],
+  .contact-card a[href*="github"]{
+    justify-content:flex-start!important;
+  }
+}

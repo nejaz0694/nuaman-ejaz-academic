@@ -976,3 +976,35 @@ html[data-theme="dark"] .publications a[href*="scholar.google"]:hover{
   color:#ffffff!important;
   transform:translateY(-2px);
 }
+
+/* V17 — mobile layout + menu close fix */
+@media(max-width:900px){
+  .hero-grid{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .hero-copy{
+    order:1!important;
+    width:100%!important;
+  }
+  .hero-visual{
+    order:2!important;
+    width:100%!important;
+    margin-top:42px!important;
+  }
+  .hero-stats,.stats{
+    margin-top:34px!important;
+  }
+  .portrait-card,.hero-photo{
+    max-width:620px!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .mobile-native-menu[open]{z-index:9000!important}
+  .mobile-native-links{
+    max-height:calc(100svh - 125px)!important;
+    overflow-y:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  section[id]{scroll-margin-top:95px}
+}
